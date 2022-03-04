@@ -1,0 +1,81 @@
+@font-face{
+    font-family: dis;
+     src: url(../includes/tipografia/Beautiful\ People\ Personal\ Use.ttf)
+}
+body{
+    background-image:url(../includes/imagenes/burbujas.jpg) ;
+    width: 100%;
+    height: 650px;
+    background-size: 100% 100%;
+}
+
+button{
+    background-color: #145683;
+    border-color: blue;
+    border-radius: 10px;
+}
+
+
+
+.container{
+    background-image: url(../includes/imagenes/pag.jpg);
+    width: 100%;
+    height: 675px;
+    background-size: 100% 100%;
+    border-radius: 20px;
+    border: 3px solid blue;
+   }
+
+h1{
+    font-family: dis;   
+    color:#eaecee; 
+}
+
+.letra{
+    color: blue;
+}
+#e{
+    color:blue ;
+    font-family: dis;
+    }
+
+#codigo_c{
+border-radius: 10px;
+border-color: blue;
+}
+
+#fecha_c{
+    border-radius: 10px;
+    border-color: blue;
+}
+
+#hora_c{
+    border-radius: 10px;
+    border-color: blue;
+}
+
+#cedula_t{
+ border-radius: 10px;
+ border-color: blue;   
+}
+
+#codigo_s{
+ border-radius: 10px; 
+ border-color: blue;  
+}
+
+#placa{
+ border-radius: 10px;
+ border-color: blue;   
+}
+
+#descripcion_c{
+ border-radius: 10px; 
+ border-color: blue;  
+}
+
+#estado{
+    border-radius: 10px; 
+    border-color: blue;  
+   }
+

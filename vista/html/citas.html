@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>CITAS</title>
+
+</head><br><br>
+
+<body>
+
+    <center>
+        <h1>LAVA AUTOS BOOM ---CITAS---</h1>
+    </center>
+    <br>
+
+    <div class="container"><br>
+        <div class="row">
+            <div class="col-md-11 offset-md-1">
+                <a href="lavaautos.html" id="e"> LAVAAUTOS___</a><a href="usuarios.html" id="e">USUARIOS___</a>
+                <a href="servicios.html" id="e">SERVICIOS___</a><a href="carros.html" id="e"> CARROS___</a>
+                <a href="trabajadores.html" id="e">TRABAJADORES___</a> <a href="citas.html" id="e">CITAS___</a>
+                <a href="productos.html" id="e">PRODUCTOS___</a> <a href="producervi.html" id="e">PRO-SER</a>
+            </div>
+
+        </div><br><br><br>
+
+        <div class="row">
+            <div class="col-md-4 offset-md-1">
+                <label for="codigo_c" class="letra">CODIGO:</label>
+                <input type="number" id="codigo_c"><br><br>
+                <label for="fecha_c" class="letra">FECHA:</label>
+                <input type="date" id="fecha_c"><br><br>
+                <label for="hora_c" class="letra">HORA:</label>
+                <input type="time" id="hora_c"><br><br>
+                <label for="cedula_t" class="letra">CED TRABAJADOR:</label>
+                <input type="number" size="18" id="cedula_t"><br><br>
+                <label for="codigo_s" class="letra">COD SERVICIO:</label>
+                <input type="number" size="20" id="codigo_s"><br><br>
+                <label for="placa" class="letra">PLACA CARRO:</label>
+                <input type="text" size="19" id="placa"><br><br>
+                <label for="estado" class="letra">ESTADO:</label>
+                <input type="text" size="24" id="estado"><br><br>
+                <label for="descripcion_c" class="letra">DESCRIPCION:</label>
+                <textarea id="descripcion_c" cols="30" rows="2"></textarea><br>
+                <button id="registrar">REGISTRAR</button>
+                <button id="editar">EDITAR</button>
+
+            </div>
+            <div class="col-md-4">
+                <table border="black" bgcolor="#3e9af5" id="concita">
+                    <H1>Resultado Consulta</H1>
+                </table>
+                <button id="consultarcita">CONSULTAR CITA</button>
+            </div>
+        </div>
+
+
+
+        <script type="text/javascript" src="../includes/jquery/jquery-3.3.1.js"></script>
+        <link rel="stylesheet" href="../includes/bootsrap 4/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/citas.css">
+        <script src="../js/citas.js"></script>
+</body>
+
+</html>
