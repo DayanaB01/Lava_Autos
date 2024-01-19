@@ -4,56 +4,71 @@
 <head>
     <meta charset='utf-8'>
     <title>USUARIOS</title>
-</head><br><br>
+</head>
 
 <body>
-    <center>
-        <h1>LAVA AUTOS BOOM--Usuario</h1>
-    </center>
-    <br>
-    <div class="container"><br>
-        <div class="row">
-            <div class="col-md-13">
-                <a href="../../index.html"> INICIO </a>   <a href="usuarios.html">|  USUARIOS </a>
-                <a href="servicios.html">| SERVICIOS </a>  <a href="carros.html">| CARROS </a>
-                <a href="trabajadores.html">| TRABAJADORES </a>  <a href="citas.html">| CITAS </a>
-                <a href="productos.html">| PRODUCTOS </a>  <a href="producservi.html">| PRO-SER</a>
-            </div>
-        <div class="col-md-13">
-            <p>Para que tu vehiculo quede como nuevo, tenemos los mejores
-                servicios de lavado, solo debes llenar el siguiente formulario.
-            </p>
+    <div class="header">
+        <h1>LAVA AUTOS BOOM</h1>
+        <div class="menu">
+            <a href="../../index.html"> INICIO </a>   <a href="usuarios.html">|  USUARIOS </a>
+            <a href="servicios.html">| SERVICIOS </a>  <a href="carros.html">| CARROS </a>
+            <a href="trabajadores.html">| TRABAJADORES </a>  <a href="citas.html">| CITAS </a>
+            <a href="productos.html">| PRODUCTOS </a>  <a href="producservi.html">| PRO-SER</a>
         </div>
-        </div><br><br>
+    </div>
+
+    <div class="introduccion">
+        <div class="imagen">
+            <img src="../includes/imagenes/auto.jpg" alt="automovil" />
+          </div>
+        <div class="intro">
+          <p>
+            No solo queremos conocer el auto, también queremos conocerte a ti, por eso te recomendamos llenar los siguientes datos.
+          </p>
+        </div>
+      </div>
+
+    <div class="container">
+        <div class="parra">
+            <p>
+              Para un mejor servicio y atención, llena el formulario a continuación.
+            </p>
+          </div>
+        </div>
 
         <div class="row">
-
             <div class="col-md-4 offset-md-1">
-                <h1>Formulario de Consulta</h1>
-                <label for="cedula_u" class="letra">CEDULA:</label>
-                <input type="number" id="cedula_u"><br><br>
-                <label for="nombre_u" class="letra">NOMBRE:</label>
-                <input type="text" size="18" id="nombre_u"><br><br>
-                <label for="apellido_u" class="letra">APELLIDO:</label>
-                <input type="text" size="17" id="apellido_u"><br><br>
-                <label for="tel_u" class="letra">TELEFONO:</label>
-                <input type="number" id="tel_u"><br><br>
-                <label for="correo_u" class="letra">CORREO:</label>
-                <input type="text" size="18" id="correo_u"><br><br>
-                <label for="direccion_u" class="letra">DIRECCION:</label>
-                <input type="text" size="16" id="direccion_u"><br>
-                <button id="registrar">REGISTRAR</button>
-                
+                <h1>Formulario de registro</h1>
+                <div class="f">
+                    <label for="cedula_u" class="letra">CEDULA:</label>
+                    <input type="number" id="cedula_u">
+                    <label for="nombre_u" class="letra">NOMBRE:</label>
+                    <input type="text" size="18" id="nombre_u">
+                    <label for="apellido_u" class="letra">APELLIDO:</label>
+                    <input type="text" size="17" id="apellido_u">
+                    <label for="tel_u" class="letra">TELEFONO:</label>
+                    <input type="number" id="tel_u">
+                    <label for="correo_u" class="letra">CORREO:</label>
+                    <input type="text" size="18" id="correo_u">
+                    <label for="direccion_u" class="letra">DIRECCION:</label>
+                    <input type="text" size="16" id="direccion_u">
+                    <button id="registrar">REGISTRAR</button>
+                </div>                
             </div>
             <div class="col-md-6 offset-md-1">
                 <table border="black" bgcolor="#eaecee" id="conusuario">
-                    <h1>Resultado Consulta</h1>
+                    <h1>Consultar registro</h1>
                 </table>
                 <button id="consultar">CONSULTAR</button>
             </div>
         </div>
 
-
+        <footer>
+            <ul>
+              <li>Proyecto educativo 2020</li>
+              <li>Actualizado 2024</li>
+            </ul>
+          </footer>
 
 
         <script type="text/javascript" src="../includes/jquery/jquery-3.3.1.js"></script>

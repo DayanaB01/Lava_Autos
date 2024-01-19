@@ -18,7 +18,6 @@ function  AgregarLavaauto(){
     data.append('tel',document.getElementById("tel_e").value);
     data.append('correo', document.getElementById("correo_e").value);
     data.append('web', document.getElementById("web_e").value);
-   
     fetch(url,{
         method: 'POST',
         body: data,

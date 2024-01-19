@@ -16,7 +16,11 @@ body{
     padding-top: 2%;
     font-family: dis;   
     color:#A0DFF8;
-}
+    }
+    a:active{
+     color: #A0DFF8;
+     font-weight: bold;
+    }
 }
 .indices{
     align-items: center;
