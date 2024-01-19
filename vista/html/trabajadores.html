@@ -4,47 +4,56 @@
 <head>
     <meta charset='utf-8'>
     <title>TRABAJADORES</title>
-</head><br><br>
+</head>
 
 <body>
-    <center>
-        <h1>LAVA AUTOS BOOM--Trabajadores</h1>
-    </center>
-    <br>
-    <div class="container"><br>
-        <div class="row">
-            <div class="col-md-13">
-                <a href=".../../index.html"> INICIO </a>   <a href="usuarios.html">|  USUARIOS </a>
-                <a href="servicios.html">| SERVICIOS </a>  <a href="carros.html">| CARROS </a>
-                <a href="trabajadores.html">| TRABAJADORES </a>  <a href="citas.html">| CITAS </a>
-                <a href="productos.html">| PRODUCTOS </a>  <a href="producservi.html">| PRO-SER</a>
-            </div>
-        <div class="col-md-13">
-            <p>Para que tu vehiculo quede como nuevo, tenemos los mejores
-                servicios de lavado, solo debes llenar el siguiente formulario.
-            </p>
+    <div class="header">
+        <h1>LAVA AUTOS BOOM</h1>
+        <div class="menu">
+            <a href="../../index.html"> INICIO </a>   <a href="usuarios.html">|  USUARIOS </a>
+            <a href="servicios.html">| SERVICIOS </a>  <a href="carros.html">| CARROS </a>
+            <a href="trabajadores.html">| TRABAJADORES </a>  <a href="citas.html">| CITAS </a>
+            <a href="productos.html">| PRODUCTOS </a>  <a href="producservi.html">| PRO-SER</a>
         </div>
-        </div><br><br>
+    </div>
+
+    <div class="introduccion">
+        <div class="intro">
+            <p>
+              Para darle el mejor lavado a tu auto, debemos conocerlo, por eso te recomendamos llenar los siguientes datos.
+            </p>
+          </div>
+        <div class="imagen">
+            <img src="../includes/imagenes/auto.jpg" alt="automovil" />
+        </div>
+    </div>
+
+    <div class="parra">
+        <p>Para que tu vehiculo quede como nuevo, tenemos los mejores
+            servicios de lavado, solo debes llenar el siguiente formulario.
+        </p>
+    </div>
 
         <div class="row">
-
             <div class="col-md-4 offset-md-1">
                 <h1>Formulario de Consulta</h1>
-                <label for="cedula_t" class="letra">CEDULA:</label>
-                <input type="number" size="20" id="cedula_t"><br><br>
-                <label for="nombre_t" class="letra">NOMBRE:</label>
-                <input type="text" size="19 " id="nombre_t"><br><br>
-                <label for="apellido_t" class="letra">APELLIDO:</label>
-                <input type="text" size="18" id="apellido_t"><br><br>
-                <label for="tel_t" class="letra">TELEFONO:</label>
-                <input type="number" id="tel_t"><br><br>
-                <label for="correo_t" class="letra">CORREO:</label>
-                <input type="number" size="19" id="correo_t"><br><br>
-                <label for="edad_t" class="letra">EDAD:</label>
-                <input type="number" size="21" id="edad_t"><br>
-                <button id="registrar">REGISTRAR</button>
-               
+                <div class="f">
+                    <label for="cedula_t" class="letra">CEDULA:</label>
+                    <input type="number" size="20" id="cedula_t">
+                    <label for="nombre_t" class="letra">NOMBRE:</label>
+                    <input type="text" size="19 " id="nombre_t">
+                    <label for="apellido_t" class="letra">APELLIDO:</label>
+                    <input type="text" size="18" id="apellido_t">
+                    <label for="tel_t" class="letra">TELEFONO:</label>
+                    <input type="number" id="tel_t">
+                    <label for="correo_t" class="letra">CORREO:</label>
+                    <input type="number" size="19" id="correo_t">
+                    <label for="edad_t" class="letra">EDAD:</label>
+                    <input type="number" size="21" id="edad_t">
+                    <button id="registrar">REGISTRAR</button>   
+                </div>            
             </div>
+
             <div class="col-md-6 offset-md-1">
                 <table border="black" bgcolor="#3e9af5" id="contrabajadores">
                         <h1>Resultado Consulta</h1>
@@ -53,9 +62,16 @@
             </div>
         </div>
 
+        <footer>
+            <ul>
+              <li>Proyecto educativo 2020</li>
+              <li>Actualizado 2024</li>
+            </ul>
+        </footer>
+
         <script type="text/javascript" src="../includes/jquery/jquery-3.3.1.js"></script>
         <link rel="stylesheet" href="../includes/bootsrap 4/css/bootstrap.css">
-        <link rel="stylesheet" href="../css/trabajadores.css">
+        <link rel="stylesheet" href="../css/usuarios.css">
         <script src="../js/trabajadores.js"></script>
 </body>
 
