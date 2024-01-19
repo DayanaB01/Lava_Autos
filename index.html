@@ -1,66 +1,107 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset='utf-8'>
-    <title>INDEX</title>
-</head><br><br>
-
-<body>
-    <center>
-        <h1>LAVA AUTOS BOOM </h1>
-    </center>
-    <br>
-    <div class="container"><br>
-        <div class="row">
-                <div class="col-md-13">
-                        <a href="./index.html"> INICIO </a>   <a href="./vista/html/usuarios.html">|  USUARIOS </a>
-                        <a href="./vista/html/servicios.html">| SERVICIOS </a>  <a href="./vista/html/carros.html">| CARROS </a>
-                        <a href="./vista/html/trabajadores.html">| TRABAJADORES </a>  <a href="./vista/html/citas.html">| CITAS </a>
-                        <a href="./vista/html/productos.html">| PRODUCTOS </a>  <a href="./vista/html/producservi.html">| PRO-SER</a>
-                    </div>
-                <div class="col-md-13">
-                    <p>Para que tu vehiculo quede como nuevo, tenemos los mejores
-                        servicios de lavado, solo debes llenar el siguiente formulario.
-                    </p>
-                </div>
-                    
-        </div><br><br>
-  
-        <div class="row">
-
-            <div class="col-md-4 offset-md-1">
-                <h1>Formulario de Consulta</h1>
-                
-                <label for="nit" class="letra">NIT:</label>
-                <input type="number"  id="nit"><br><br>
-                <label for="nombre_e" class="letra">NOMBRE:</label>
-                <input type="text" size="18" id="nombre_e"><br><br>
-                <label for="direccion_e" class="letra">DIRECCION:</label>
-                <input type="text" size="16" id="direccion_e"><br><br>
-                <label for="tel_e" class="letra">TELEFONO:</label>
-                <input type="number" id="tel_e"><br><br>
-                <label for="correo_e" class="letra">CORREO:</label>
-                <input type="text" size="19" id="correo_e"><br><br>
-                <label for="web_e" class="letra">WEB:</label>
-                <input type="text" size="22" id="web_e"><br>
-                <button id="registrar">REGISTRAR</button>
-                
-            </div>
-            <div class="col-md-6 offset-md-1">
-                <table border="black" bgcolor="#3e9af5" id="conlava">
-                    <h1>Resultado  Consulta</h1>
-                </table>
-                <button id="consultar">CONSULTAR</button>
-            </div>
-        </div>
-
+  <head>
+    <meta charset="utf-8" />
+    <title>BOOM</title>
+  </head>
+  <body>
+    <div class="header">
+      <h1>LAVA AUTOS BOOM</h1>
+      <div class="indices">
+        <a href="./index.html"> INICIO </a>
+        <a href="./vista/html/usuarios.html">| USUARIOS </a>
+        <a href="./vista/html/servicios.html">| SERVICIOS </a>
+        <a href="./vista/html/carros.html">| CARROS </a>
+        <a href="./vista/html/trabajadores.html">| TRABAJADORES </a>
+        <a href="./vista/html/citas.html">| CITAS </a>
+        <a href="./vista/html/productos.html">| PRODUCTOS </a>
+        <a href="./vista/html/producservi.html">| PRO-SER</a>
+      </div>
     </div>
 
-    <script type="text/javascript" src="./vista/includes/jquery/jquery-3.3.1.js"></script>
-    <link rel="stylesheet" type="text/css" href="./vista/includes/bootsrap 4/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./vista/css/index.css">
-    <script src="./vista/js/lavaautos.js"></script>
-</body>
+    <div class="introduccion">
+      <div class="intro">
+        <p>
+          Para que tu vehiculo quede como nuevo, tenemos los mejores servicios
+          de lavado, usamos los mejores productos porque sabemos lo importante
+          que es tu auto para ti.
+        </p>
+      </div>
 
+      <div class="imagen">
+        <img src="./vista/includes/imagenes/auto.jpg" alt="automovil">
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-13">
+              <div class="card" style="width: 18rem;">
+                <img src="./vista/includes/imagenes/sucio.jpg" class="card-img-top" alt="auto sucio">
+                <div class="card-body">
+                  <p class="card-text">Aunque este irreconocible...</p>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img src="./vista/includes/imagenes/lavado.jpg" class="card-img-top" alt="auto lavado">
+                <div class="card-body">
+                  <p class="card-text">será tratado para volver...</p>
+                </div>
+              </div>
+              <div class="card" style="width: 18rem;">
+                <img src="./vista/includes/imagenes/nuevo.jpg" class="card-img-top" alt="auto nuevo">
+                <div class="card-body">
+                  <p class="card-text">como nuevo a tus manos.</p>
+                </div>
+              </div>
+        </div>
+      </div>
+      <div class="parra">
+        <p>Para un mejor servicio y atención, llena el formulario a continuación.</p>
+      </div>
+      <div class="row">
+        <div class="col-md-4 offset-md-1">
+          <h1>Formulario de registro</h1>
+          <div class="f">
+            <label for="nit" class="letra">NIT:</label>
+            <input type="number" id="nit" /><br /><br />
+            <label for="nombre_e" class="letra">NOMBRE:</label>
+            <input type="text" size="18" id="nombre_e" /><br /><br />
+            <label for="direccion_e" class="letra">DIRECCION:</label>
+            <input type="text" size="16" id="direccion_e" /><br /><br />
+            <label for="tel_e" class="letra">TELEFONO:</label>
+            <input type="number" id="tel_e" /><br /><br />
+            <label for="correo_e" class="letra">CORREO:</label>
+            <input type="text" size="19" id="correo_e" /><br /><br />
+            <label for="web_e" class="letra">WEB:</label>
+            <input type="text" size="22" id="web_e" /><br />
+            <button id="registrar">REGISTRAR</button>
+          </div>
+        </div>
+        <div class="col-md-6 offset-md-1">
+          <table border="black" bgcolor="#3e9af5" id="conlava">
+            <h1>Consultar registro</h1>
+          </table>
+          <button id="consultar">CONSULTAR</button>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <ul>
+        <li>Proyecto educativo 2020</li>
+        <li>Actualizado 2024</li>
+      </ul>
+    </footer>
+    <script
+      type="text/javascript"
+      src="./vista/includes/jquery/jquery-3.3.1.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./vista/includes/bootsrap 4/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./vista/css/index.css" />
+    <script src="./vista/js/lavaautos.js"></script>
+  </body>
 </html>
