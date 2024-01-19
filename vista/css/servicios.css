@@ -3,39 +3,92 @@
      src: url(../includes/tipografia/Beautiful\ People\ Personal\ Use.ttf)
 }
 body{
-    background-image:url(../includes/imagenes/auto.jpg) ;
-    width: 100%;
-    height: 650px;
-    background-size: 100% 125%;
+    margin: 0%;
+    padding: 0%;
+    background-color: black;
+}
+.header{
+    background-color: #145683;
+    text-align: center;
+h1{
+    padding-top: 2%;
+    font-family: dis;   
+    color:#A0DFF8;
+}
+}
+.menu{
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    border: 2px #145683 solid;
+
+    a{
+        text-decoration: none;
+        margin-left: 2%;
+        background-color: #145683;
+    }
+}
+.introduccion{
+    border-radius: 0% 0% 20% 10%;
+    margin-top: 5%;
+    display: flex;
+    .intro{
+        width: 40%;
+        align-self: center;
+        padding-left: 1%;
+    }
+    .imagen{
+        width: 60%;
+        img{
+            image-rendering: auto;
+            width: 100%;
+            border-radius: 45%;
+        }
+        img:hover{
+            transform: scaleX(-1);
+        }
+    }
+}
+
+.parra{
+    text-align: center;
+    margin: 5%;
+}
+.col-md-6{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.f{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+input{
+    border-radius: 10px;
+    border-color: blue;
+    width: 70%;  
 }
 
 button{
     background-color: #145683;
-    border-color: blue;
+    border-color: #01c4e7;
     border-radius: 10px;
+    color: #A0DFF8;
+    font-size: 15px ;
+    font-weight: bold;
+    width: 55%;
+    margin-top: 1%;
 }
-
-.container{
-    width: 100%;
-    height: 100%;
-    background-size: 100% 100%;
-   border-radius: 20px;
-}
-
 h1{
-    font-family: dis;   
-    color:blue; 
+    text-align: center;
+    color: #A0DFF8;
+    font-family: dis;
 }
 
 .letra{
     color: #eaecee;
-}
-
-.col-md-13{
-    align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    width: 100%;
 }
 p{
     color: #01c4e7;
@@ -44,38 +97,20 @@ p{
 a{
     color: #eaecee;
 }
-
-#codigo_s{
-border-radius: 10px;
-border-color: blue;
+footer{
+    background-color: #145683;
+    height: 5rem;
+    margin-top: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    ul{
+        list-style: none;
+    }
+    li{
+        color: #A0DFF8;
+        font-size: large;
+        
+    }
 }
 
-#completo_s{
-    border-radius: 10px;
-    border-color: blue;
-}
-
-#medio_s{
- border-radius: 10px;
- border-color: blue;   
-}
-
-#llantas_s{
- border-radius: 10px; 
- border-color: blue;  
-}
-
-#interno_s{
- border-radius: 10px;
- border-color: blue;   
-}
-
-#brillo_s{
- border-radius: 10px; 
- border-color: blue;  
-}
-
-#nit{
-    border-radius: 10px; 
-    border-color: blue;  
-   }

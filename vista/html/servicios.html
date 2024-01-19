@@ -4,49 +4,58 @@
 <head>
     <meta charset='utf-8'>
     <title>SERVICIOS</title>
-</head><br><br>
+</head>
 
 <body>
+    <div class="header">
+        <h1>LAVA AUTOS BOOM</h1>
+        <div class="menu">
+            <a href="../../index.html"> INICIO </a>   <a href="usuarios.html">|  USUARIOS </a>
+            <a href="servicios.html">| SERVICIOS </a>  <a href="carros.html">| CARROS </a>
+            <a href="trabajadores.html">| TRABAJADORES </a>  <a href="citas.html">| CITAS </a>
+            <a href="productos.html">| PRODUCTOS </a>  <a href="producservi.html">| PRO-SER</a>
+        </div>
+    </div>
 
-    <center>
-        <h1>LAVA AUTOS BOOM--Servicios</h1>
-    </center>
-    <br>
-    <div class="container"><br>
+    <div class="introduccion">
+        <div class="imagen">
+            <img src="../includes/imagenes/auto.jpg" alt="automovil" />
+        </div>
+        <div class="intro">
+          <p>
+            Para darle el mejor lavado a tu auto, debemos conocerlo, por eso te recomendamos llenar los siguientes datos.
+          </p>
+        </div>
+    </div>
+
         <div class="row">
-            <div class="col-md-13">
-                <a href="../../index.html"> INICIO </a>   <a href="usuarios.html">|  USUARIOS </a>
-                <a href="servicios.html">| SERVICIOS </a>  <a href="carros.html">| CARROS </a>
-                <a href="trabajadores.html">| TRABAJADORES </a>  <a href="citas.html">| CITAS </a>
-                <a href="productos.html">| PRODUCTOS </a>  <a href="producservi.html">| PRO-SER</a>
-            </div>
-        <div class="col-md-13">
+         <div class="parra">
             <p>Para que tu vehiculo quede como nuevo, tenemos los mejores
                 servicios de lavado, solo debes llenar el siguiente formulario.
             </p>
         </div>
-        </div><br>
+        </div>
 
         <div class="row">
-
             <div class="col-md-4 offset-md-1">
-                <h1>Formulario de Consulta</h1>
-                <label for="codigo_s" class="letra">CODIGO:</label>
-                <input type="number" size="20" id="codigo_s"><br><br>
-                <label for="completo_s" class="letra">COMPLETO:</label>
-                <input type="text" size="18" id="completo_s"><br><br>
-                <label for="medio_s" class="letra">MEDIO:</label>
-                <input type="text" size="21" id="medio_s"><br><br>
-                <label for="llantas_s" class="letra">LLANTAS:</label>
-                <input type="text" id="llantas_s"><br><br>
-                <label for="interno_s" class="letra">INTERNO:</label>
-                <input type="text" size="20" id="interno_s"><br><br>
-                <label for="brillo_s" class="letra">BRILLO:</label>
-                <input type="text" size="22" id="brillo_s"><br>
-                <label for="nit" class="letra">NIT EMPRESA:</label>
-                <input type="number" size="16" id="nit"><br>
-                <button id="registrar">REGISTRAR</button>
-               
+                <h1>Formulario de registro</h1>
+                <div class="f">
+                    <label for="codigo_s" class="letra">CODIGO:</label>
+                    <input type="number" size="20" id="codigo_s">
+                    <label for="completo_s" class="letra">COMPLETO:</label>
+                    <input type="text" size="18" id="completo_s">
+                    <label for="medio_s" class="letra">MEDIO:</label>
+                    <input type="text" size="21" id="medio_s">
+                    <label for="llantas_s" class="letra">LLANTAS:</label>
+                    <input type="text" id="llantas_s">
+                    <label for="interno_s" class="letra">INTERNO:</label>
+                    <input type="text" size="20" id="interno_s">
+                    <label for="brillo_s" class="letra">BRILLO:</label>
+                    <input type="text" size="22" id="brillo_s">
+                    <label for="nit" class="letra">NIT EMPRESA:</label>
+                    <input type="number" size="16" id="nit">
+                    <button id="registrar">REGISTRAR</button>
+                </div>               
             </div>
             <div class="col-md-6 offset-md-1">
                 <table border="black" bgcolor="#3e9af5" id="conservicio">
@@ -55,8 +64,12 @@
                 <button id="consultar">CONSULTAR</button>
             </div>
         </div>
-
-
+        <footer>
+            <ul>
+              <li>Proyecto educativo 2020</li>
+              <li>Actualizado 2024</li>
+            </ul>
+          </footer>
 
         <script type="text/javascript" src="../includes/jquery/jquery-3.3.1.js"></script>
         <link rel="stylesheet" href="../includes/bootsrap 4/css/bootstrap.min.css">
