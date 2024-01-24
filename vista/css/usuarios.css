@@ -99,7 +99,9 @@ p{
 a{
     color: #eaecee;
 }
-
+img{
+    width: 100%;
+}
 footer{
     background-color: #145683;
     height: 5rem;
@@ -114,5 +116,17 @@ footer{
         color: #A0DFF8;
         font-size: large;
         
+    }
+}
+
+.imagenes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card{
+    background-color: black;
+    img{
+        width: 80%;
     }
 }

@@ -77,7 +77,7 @@ body{
     margin: 5%;
 }
 
-h1{
+h1, h5{
     text-align: center;
     color: #A0DFF8;
     font-family: dis;
@@ -118,6 +118,11 @@ p{
 }
 a{
     color: #eaecee;
+}
+li{
+    color: #A0DFF8;
+    font-size: large;
+    
 }
 
 footer{
