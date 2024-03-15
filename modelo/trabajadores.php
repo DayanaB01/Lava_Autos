@@ -2,13 +2,13 @@
 class trabajadores{
     function AgregarTrabajador($param){
         extract($param);
-        $sql = "INSERT INTO trabajadores(
-            cedula_trabajador, nombre_trabajador, apellido_trabajador,telefono_trabajador, correo_trabajador, edad_trabajador)
-            VALUES (?, ?, ?, ?, ?, ?);";
+        $sql = "INSERT INTO colaboradores(
+            cedula_colab, nombre_colab, apellido_colab,telefono_colab, correo_colab, edad_colab, nit_sede)
+            VALUES (?, ?, ?, ?, ?, ?, ?);";
         $rs = $conexion->getPDO()->prepare($sql);
         $conexion->getPDO()->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 try {
-                    $rs->execute(array($cedula,$nombre, $apellido, $telefono, $correo, $edad ));
+                    $rs->execute(array($cedula,$nombre,$apellido,$telefono,$correo,$edad,$sede));
                       $state  = "Trabajador insertado correctamente con la cedula " .$cedula ;
                      
                     echo json_encode($state);
@@ -23,7 +23,7 @@ class trabajadores{
 
     function consultartraba($param){
         extract($param);
-        $sql = "select * from trabajadores";
+        $sql = "select * from colaboradores";
         $rs = $conexion->getPDO()->prepare($sql);
         if ($rs->execute(array())) {
             if ($filas = $rs->fetchAll(PDO::FETCH_ASSOC)) {

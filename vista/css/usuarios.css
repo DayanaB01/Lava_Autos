@@ -67,7 +67,7 @@ h1{
     align-items: center;
     justify-content: center;
 }
-input{
+input, textarea{
     border-radius: 10px;
     border-color: blue;
     width: 70%;  
@@ -79,8 +79,9 @@ button{
     color: #A0DFF8;
     font-size: 15px ;
     font-weight: bold;
-    width: 55%;
+    width: 50%;
     margin-top: 1%;
+    justify-content: center;
 }
 h1{
     text-align: center;
@@ -99,9 +100,10 @@ p{
 a{
     color: #eaecee;
 }
-img{
+/* img{
     width: 100%;
-}
+    height: 15rem;
+} */
 footer{
     background-color: #145683;
     height: 5rem;
@@ -126,7 +128,36 @@ footer{
 }
 .card{
     background-color: black;
-    img{
-        width: 80%;
-    }
+    width: 18rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card img{
+    width: 80%;
+    height: 15rem;
+}
+.card ul{
+    color: #01c4e3;
+    font-size: x-large;
+}
+.card button{
+    background-color: #145683;
+    border-color: #01c4e7;
+    border-radius: 10px;
+    color: #A0DFF8;
+    font-size: 15px ;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 1%;
+}
+.row{
+    margin-top: 5%;
+}
+
+.col-md-8{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }

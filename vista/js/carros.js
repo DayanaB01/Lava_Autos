@@ -1,4 +1,4 @@
-var url='../../controlador/fachada.php';
+var url='controlador/fachada.php';
 
 
 document.getElementById("registrar").addEventListener('click', function() {

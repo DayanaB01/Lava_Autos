@@ -1,78 +1,109 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset='utf-8'>
+  <head>
+    <meta charset="utf-8" />
     <title>TRABAJADORES</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="header">
-        <h1>LAVA AUTOS BOOM</h1>
-        <div class="menu">
-            <a href="../../index.html"> INICIO </a>   <a href="usuarios.html">|  USUARIOS </a>
-            <a href="servicios.html">| SERVICIOS </a>  <a href="carros.html">| CARROS </a>
-            <a href="trabajadores.html">| TRABAJADORES </a>  <a href="citas.html">| CITAS </a>
-            <a href="productos.html">| PRODUCTOS </a>  <a href="producservi.html">| PRO-SER</a>
-        </div>
+      <h1>LAVA AUTOS BOOM</h1>
+      <div class="indices">
+        <a href="./adminIndex.html"> INICIO </a>
+        <a href="./productos.html">| PRODUCTOS </a>
+        <a href="./trabajadores.html">| COLABORADORES </a>
+      </div>
     </div>
 
-    <div class="introduccion">
-        <div class="intro">
-            <p>
-              Para darle el mejor lavado a tu auto, debemos conocerlo, por eso te recomendamos llenar los siguientes datos.
-            </p>
-          </div>
-        <div class="imagen">
-            <img src="../includes/imagenes/auto.jpg" alt="automovil" />
-        </div>
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h1>ADMINISTRACIÓN</h1>
+      </div>
     </div>
-
-    <div class="parra">
-        <p>Para que tu vehiculo quede como nuevo, tenemos los mejores
-            servicios de lavado, solo debes llenar el siguiente formulario.
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <p>
+          LAVA-AUTOS: la plataforma web creada para la mejor comunicación con
+          los usuarios, que de manera más fácil puedan solicitar citas para el
+          lavado de vehiculos. Tamboén pueden comprar más rapido y fácil.
         </p>
+      </div>
     </div>
 
-        <div class="row">
-            <div class="col-md-4 offset-md-1">
-                <h1>Formulario de Consulta</h1>
-                <div class="f">
-                    <label for="cedula_t" class="letra">CEDULA:</label>
-                    <input type="number" size="20" id="cedula_t">
-                    <label for="nombre_t" class="letra">NOMBRE:</label>
-                    <input type="text" size="19 " id="nombre_t">
-                    <label for="apellido_t" class="letra">APELLIDO:</label>
-                    <input type="text" size="18" id="apellido_t">
-                    <label for="tel_t" class="letra">TELEFONO:</label>
-                    <input type="number" id="tel_t">
-                    <label for="correo_t" class="letra">CORREO:</label>
-                    <input type="number" size="19" id="correo_t">
-                    <label for="edad_t" class="letra">EDAD:</label>
-                    <input type="number" size="21" id="edad_t">
-                    <button id="registrar">REGISTRAR</button>   
-                </div>            
-            </div>
-
-            <div class="col-md-6 offset-md-1">
-                <table border="black" bgcolor="#3e9af5" id="contrabajadores">
-                        <h1>Resultado Consulta</h1>
-                </table>
-                <button id="consultar">CONSULTAR</button>
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="formularios">
+            <h1>Formulario de registro de colaboradores</h1>
+            <div class="f">
+              <label for="cedula_c">CEDULA:</label>
+              <input type="number" size="20" id="cedula_c" />
+              <label for="nombre_c">NOMBRE:</label>
+              <input type="text" size="19 " id="nombre_c" />
+              <label for="apellido_c">APELLIDO:</label>
+              <input type="text" size="18" id="apellido_c" />
+              <label for="tel_c">TELEFONO:</label>
+              <input type="number" id="tel_c" />
+              <label for="correo_c">CORREO:</label>
+              <input type="text" size="19" id="correo_c" />
+              <label for="edad_c">EDAD:</label>
+              <input type="number" size="21" id="edad_c" />
+              <label for="sede_c">SEDE:</label>
+              <input type="number" size="21" id="sede_c" />
+              <button id="registrar">REGISTRAR</button>
             </div>
         </div>
+      </div>
+    </div>
 
-        <footer>
-            <ul>
-              <li>Proyecto educativo 2020</li>
-              <li>Actualizado 2024</li>
-            </ul>
-        </footer>
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <h1>Lista de colaboradores</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>CEDULA</th>
+              <th>NOMBRE</th>
+              <th>APELLIDO</th>
+              <th>TELEFONO</th>
+              <th>CORREO</th>
+              <th>EDAD</th>
+              <th>SEDE</th>
+            </tr>
+          </thead>
+          <tbody id="contrabajadores"></tbody>
+        </table>
+        <button id="consultar">CONSULTAR</button>
+      </div>
+    </div>
 
-        <script type="text/javascript" src="../includes/jquery/jquery-3.3.1.js"></script>
-        <link rel="stylesheet" href="../includes/bootsrap 4/css/bootstrap.css">
-        <link rel="stylesheet" href="../css/usuarios.css">
-        <script src="../js/trabajadores.js"></script>
-</body>
+    <footer>
+      <ul>
+        <li>ELABORADO POR: DAYANA</li>
+      </ul>
+      <ul>
+        <li><a href="../../index.html">PRINCIPAL:</a></li>
+        <li>Registros</li>
+      </ul>
+      <ul>
+        <li>COLABORADORES:</li>
+        <li>Consultas</li>
+      </ul>
+      <ul>
+        <li><a href="adminIndex.html">ADMINISTRACIÓN: </a></li>
+        <li>registros</li>
+      </ul>
+      <ul>
+        <li>Proyecto educativo 2020</li>
+        <li>Actualizado 2024</li>
+      </ul>
+    </footer>
 
+    <script
+      type="text/javascript"
+      src="../includes/jquery/jquery-3.3.1.js"
+    ></script>
+    <link rel="stylesheet" href="../includes/bootsrap 4/css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <script src="../js/trabajadores.js"></script>
+  </body>
 </html>

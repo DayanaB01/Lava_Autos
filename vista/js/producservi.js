@@ -1,12 +1,16 @@
 var url='../../controlador/fachada.php';
 
 
-document.getElementById("registrar").addEventListener('click', function() {
-    AgregarProducservi();
-});
+// document.getElementById("registrar").addEventListener('click', function() {
+//     AgregarProducservi();
+// });
 
-document.getElementById("consultar").addEventListener('click', function() {
-    Consultarps();
+// document.getElementById("consultar").addEventListener('click', function() {
+//     Consultarps();
+// });
+
+document.getElementById("consultarProductos").addEventListener('click', function(){
+    ConsultarProductos();
 });
 
 function AgregarProducservi() {
@@ -53,4 +57,28 @@ function Consultarps() {
 
 }
 
+function ConsultarProductos(){
+    const data = new FormData();
+    data.append('oper', 'consultarproduc');
+    data.append('clase', 'productos');
+    fetch(url, {
+            method: 'POST', // or 'PUT'
+            body: data,
+        }).then(res => res.json())
+        .catch(error => console.error('Error:', error))
+        .then(response => {
+            //console.log(response);
+            var html="";
+            response.forEach(element => {
+                html+="<div class='card'><img src="+element.imagen+"><ul><li>"+element.nombre_producto+"</li><li>"+
+                element.tamano_producto+"</li><li>"+element.valor_producto+"</li></ul><button onclick='comprar("+element.codigo_producto+")'>Carrito</button></div>";
+            });
+            document.getElementById("lista").innerHTML=(html);
+        });
+}
+
+function comprar(c){
+    alert('producto seleccionado')
+    console.log("aquiiiii: ",c)
+}
 

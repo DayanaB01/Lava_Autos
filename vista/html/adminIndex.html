@@ -2,9 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>PRODUCTOS</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>LavaAutos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
-
   <body>
     <div class="header">
       <h1>LAVA AUTOS BOOM</h1>
@@ -30,45 +31,47 @@
       </div>
     </div>
 
-      <div class="row">
-        <div class="col-md-6 offset-md-3">
-          <div class="formularios">
-            <h1>Formulario de registro de productos</h1>
-            <div class="f">
-                <label for="codigo_p">CODIGO:</label>
-                <input type="number" size="20" id="codigo_p" />
-                <label for="nombre_p">NOMBRE:</label>
-                <input type="text" size="19 " id="nombre_p" />
-                <label for="tamaño_p">TAMAÑO:</label>
-                <input type="text" size="19" id="tamaño_p" />
-                <label for="valor_p">VALOR:</label>
-                <input type="number" size="21" id="valor_p" />
-                <label for="calidad_p">SEDES:</label>
-                <input type="number" size="19" id="nit_sede" />
-                <label for="imagen_p">URL IMAGEN</label>
-                <input type="text" id="imagen_p">
-                <button id="registrar">REGISTRAR</button>
-            </div>
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="formularios">
+          <h1>Formulario de registro de sedes</h1>
+          <div class="f">
+            <label for="nit">NIT:</label>
+            <input type="number" id="nit" />
+            <label for="nombre_s">NOMBRE:</label>
+            <input type="text" size="18" id="nombre_s" />
+            <label for="direccion_s">DIRECCION:</label>
+            <input type="text" size="16" id="direccion_s" />
+            <label for="tel_s">TELEFONO:</label>
+            <input type="number" id="tel_s" />
+            <label for="correo_s">CORREO:</label>
+            <input type="text" size="19" id="correo_s" />
+            <label for="admin_s">ADMINISTRADOR:</label>
+            <input type="text" id="admin_s">
+            <button id="registrar">REGISTRAR</button>
           </div>
         </div>
       </div>
+    </div>
 
-
+    <div class="row">
       <div class="col-md-6 offset-md-3">
-        <h1>Tabla de productos registrados</h1>
-        <table>
-          <thead>
-            <tr>
-              <th>CODIGO</th>
-              <th>NOMBRE</th>
-              <th>TAMAÑO</th>
-              <th>VALOR</th>
-              <th>URL IMAGEN</th>
-            </tr>
-          </thead>
-          <tbody id="conproductos"></tbody>
-        </table>
-        <button id="consultar">CONSULTAR</button>
+        <div class="consultas">
+          <h2>Consultas generales de sedes</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>NOMBRE</th>
+                <th>DIRECCIÓN</th>
+                <th>TELEFONO</th>
+                <th>CORREO</th>
+                <th>RESPONSABLE</th>
+              </tr>
+            </thead>
+            <tbody id="conlava"></tbody>
+          </table>
+          <button id="consultar">CONSULTAR</button>
+        </div>
       </div>
     </div>
 
@@ -93,7 +96,6 @@
         <li>Actualizado 2024</li>
       </ul>
     </footer>
-
     <script
       type="text/javascript"
       src="../includes/jquery/jquery-3.3.1.js"
@@ -103,6 +105,6 @@
       href="../includes/bootsrap 4/css/bootstrap.min.css"
     />
     <link rel="stylesheet" href="../css/index.css" />
-    <script src="../js/productos.js"></script>
+    <script src="../js/lavaautos.js"></script>
   </body>
 </html>

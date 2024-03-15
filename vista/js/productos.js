@@ -11,24 +11,21 @@ document.getElementById("consultar").addEventListener('click', function() {
 
 
 function AgregarProductos() {
-
     const data = new FormData();
     data.append('oper', 'Agregarproducto');
     data.append('clase', 'productos');
     data.append('codigo', document.getElementById("codigo_p").value);
     data.append('nombre', document.getElementById("nombre_p").value);
-    data.append('tamaño', document.getElementById("tamaño_p").value);
-    data.append('marca', document.getElementById("marca_p").value);
+    data.append('tamano', document.getElementById("tamaño_p").value);
     data.append('valor', document.getElementById("valor_p").value);
-    data.append('calidad', document.getElementById("calidad_p").value);
-
+    data.append('nit', document.getElementById("nit_sede").value);
+    data.append('imagen', document.getElementById("imagen_p").value);
     fetch(url, {
             method: 'POST', // or 'PUT'
             body: data, // data can be `string` or {object}!
-
         }).then(res => res.json())
         .catch(error => console.error('Error:', error))
-        .then(response => alert(response));
+        .then(resp => alert('Registrado con exito!', resp));
 
 }
 
@@ -42,11 +39,11 @@ function Consultarproductos() {
         }).then(res => res.json())
         .catch(error => console.error('Error:', error))
         .then(response => {
-            console.log(response);
-            var html="<tr><th> CODIGO </th> <th> NOMBRE </th> <th> TAMAÑO </th> <th> MARCA </th> <th> VALOR </th> <th> CALIDAD </th></tr>";
+            //console.log(response);
+            var html="";
             response.forEach(element => {
-                html+="<tr><th>"+ element.codigo_producto +" </th>" +"<th>"+ element.nombre_producto+" </th>" +"<th>"+ element.tamaño_producto+" </th>" 
-                +"<th>"+ element.marca_producto+" </th>" +"<th>"+ element.valor_producto+" </th>" +"<th>"+ element.calidad_producto+" </th></tr>"
+                html+="<tr><th>"+ element.codigo_producto +" </th>" +"<th>"+ element.nombre_producto+" </th>" +"<th>"+ element.tamano_producto+" </th>" 
+                +"<th>"+ element.valor_producto+"</th><th>"+element.imagen+"</th></tr>"
             });
             document.getElementById("conproductos").innerHTML=(html);
         });

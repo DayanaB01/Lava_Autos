@@ -15,7 +15,7 @@ body{
    h1{
     padding-top: 2%;
     font-family: dis;   
-    color:#A0DFF8;
+    color:#11C7FF;
     }
     a:active{
      color: #A0DFF8;
@@ -77,9 +77,9 @@ body{
     margin: 5%;
 }
 
-h1, h5{
+h1, h5, h2{
     text-align: center;
-    color: #A0DFF8;
+    color: #11C7FF;
     font-family: dis;
 }
 .f{
@@ -108,12 +108,12 @@ button{
     flex-direction: column;
     align-items: center;
 }
-.letra{
+label{
     color: #eaecee;
 }
 
 p{
-    color: #01c4e7;
+    color: #11C7FF;
     font-size: 25px;
 }
 a{
@@ -124,10 +124,20 @@ li{
     font-size: large;
     
 }
+table{
+    border: 2px solid #A0DFF8;
+}
+th{
+    color: #A0DFF8;
+    width: 10rem;
+}
+.col-md-6{
+    margin-top: 5%;
+}
 
 footer{
     background-color: #145683;
-    height: 5rem;
+    height: 10rem;
     margin-top: 3%;
     display: flex;
     align-items: center;

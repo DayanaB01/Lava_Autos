@@ -14,12 +14,13 @@ function AgregarTrabajador() {
     const data = new FormData();
     data.append('oper', 'AgregarTrabajador');
     data.append('clase', 'trabajadores');
-    data.append('cedula', document.getElementById("cedula_t").value);
-    data.append('nombre', document.getElementById("nombre_t").value);
-    data.append('apellido', document.getElementById("apellido_t").value);
-    data.append('telefono', document.getElementById("tel_t").value);
-    data.append('correo', document.getElementById("correo_t").value);
-    data.append('edad', document.getElementById("edad_t").value);
+    data.append('cedula', document.getElementById("cedula_c").value);
+    data.append('nombre', document.getElementById("nombre_c").value);
+    data.append('apellido', document.getElementById("apellido_c").value);
+    data.append('telefono', document.getElementById("tel_c").value);
+    data.append('correo', document.getElementById("correo_c").value);
+    data.append('edad', document.getElementById("edad_c").value);
+    data.append('sede', document.getElementById('sede_c').value)
 
     fetch(url, {
             method: 'POST', // or 'PUT'
@@ -27,7 +28,7 @@ function AgregarTrabajador() {
 
         }).then(res => res.json())
         .catch(error => console.error('Error:', error))
-        .then(response => alert(response));
+        .then(response => alert('Agregado con exito!',response));
 
 }
 
@@ -41,11 +42,11 @@ function  ConsultarTrabajadores() {
         }).then(res => res.json())
         .catch(error => console.error('Error:', error))
         .then(response => {
-            console.log(response);
-            var html="<tr><th> CEDULA </th> <th> NOMBRE </th> <th> APELLIDO </th> <th> TELEFONO </th> <th> CORREO </th> <th> EDAD </th></tr>";
+            //console.log(response);
+            var html="";
             response.forEach(element => {
-                html+="<tr><th>"+ element.cedula_trabajador +" </th>" +"<th>"+ element.nombre_trabajador+" </th>" +"<th>"+ element.apellido_trabajador+" </th>" 
-                +"<th>"+ element.telefono_trabajador+" </th>" +"<th>"+ element.correo_trabajador+" </th>" +"<th>"+ element.edad_trabajador+" </th></tr>"
+                html+="<tr><th>"+ element.cedula_colab +" </th>" +"<th>"+ element.nombre_colab+" </th>" +"<th>"+ element.apellido_colab+" </th>" 
+                +"<th>"+ element.telefono_colab+" </th>" +"<th>"+ element.correo_colab+" </th>" +"<th>"+ element.edad_colab+"</th>"+"<th>"+element.nit_sede+"</th></tr>"
             });
             document.getElementById("contrabajadores").innerHTML=(html);
         });

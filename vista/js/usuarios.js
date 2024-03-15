@@ -1,4 +1,4 @@
-var url='../../controlador/fachada.php';
+var url='controlador/fachada.php';
 
 
 document.getElementById("registrar").addEventListener('click', function() {
@@ -25,7 +25,7 @@ function AgregarUsuario() {
     data.append('direccion', document.getElementById("direccion_u").value);
 
     fetch(url, {
-            method: 'POST', // or 'PUT'
+            method: 'PUT', // or 'PUT'
             body: data, // data can be `string` or {object}!
 
         }).then(res => res.json())

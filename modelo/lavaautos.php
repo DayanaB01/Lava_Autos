@@ -2,13 +2,13 @@
 class lavaautos{
     function agregarLavaauto($param){
         extract($param);
-        $sql = "INSERT INTO lavaauto(
-            nit_empresa, nombre_empresa, direccion_empresa, telefono_empresa, correo_empresa, web_empresa)
+        $sql = "INSERT INTO sedes(
+            nit_sede, nombre_sede, direccion_sede, telefono_sede, correo_sede, nombre_admin)
             VALUES (?, ?, ?, ?, ?, ?);";
             $rs = $conexion->getPDO()->prepare($sql);
             $conexion->getPDO()->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             try {
-                $rs->execute(array($nit,$nombre,$direccion,$tel,$correo,$web));
+                $rs->execute(array($nit,$nombre,$direccion,$tel,$correo,$admin));
                   $state  = "Lavaauto insertado con codigo" .$nit;
                  
                 echo json_encode($state);
@@ -24,7 +24,7 @@ class lavaautos{
 
     function consultarlava($param){
         extract($param);
-        $sql = "select * from lavaauto";
+        $sql = "select * from sedes";
         $rs = $conexion->getPDO()->prepare($sql);
         if ($rs->execute(array())) {
             if ($filas = $rs->fetchAll(PDO::FETCH_ASSOC)) {
