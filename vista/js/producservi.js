@@ -9,9 +9,12 @@ var url='../../controlador/fachada.php';
 //     Consultarps();
 // });
 
-document.getElementById("consultarProductos").addEventListener('click', function(){
-    ConsultarProductos();
-});
+window.addEventListener('click', function(){
+    ConsultarProductos()
+})
+// document.getElementById("consultarProductos").addEventListener('click', function(){
+//     ConsultarProductos();
+// });
 
 function AgregarProducservi() {
 
@@ -58,6 +61,7 @@ function Consultarps() {
 }
 
 function ConsultarProductos(){
+    console.log('CARGANDO...--')
     const data = new FormData();
     data.append('oper', 'consultarproduc');
     data.append('clase', 'productos');

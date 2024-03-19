@@ -4,12 +4,12 @@ class carros{
     function AgregarCarro($param){
         extract($param);
         $sql = "INSERT INTO carros(
-            placa_carro, marca_carro, modelo_carro, tipo_carro, codigo_servicio, cedula_usuario)
-            VALUES (?, ?, ?, ?, ?, ?);";
+            placa_carro, marca_carro, modelo_carro,tamano_carro, cedula_usuario)
+            VALUES (?, ?, ?, ?, ?);";
         $rs = $conexion->getPDO()->prepare($sql);
         $conexion->getPDO()->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION).$ex;
                 try {
-                    $rs->execute(array($placa,$marca, $modelo, $tipo, $codigo_s,$cedula_u ));
+                    $rs->execute(array($placa,$marca, $modelo, $tamano,$cedula_u ));
                       $state  = "Carro insertado correctamente con placa " .$placa ;
                      
                     echo json_encode($state);

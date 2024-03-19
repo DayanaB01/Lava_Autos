@@ -1,19 +1,18 @@
-var url='controlador/fachada.php';
+var url='../../controlador/fachada.php';
 
 
 document.getElementById("registrar").addEventListener('click', function() {
     AgregarUsuario();
 });
 
-document.getElementById("consultar").addEventListener('click', function() {
-    Consultarusu();
-});
+// document.getElementById("consultar").addEventListener('click', function() {
+//     Consultarusu();
+// });
 
 
 
 
 function AgregarUsuario() {
-
     const data = new FormData();
     data.append('oper', 'Agregarusuario');
     data.append('clase', 'usuarios');
@@ -23,9 +22,10 @@ function AgregarUsuario() {
     data.append('telefono', document.getElementById("tel_u").value);
     data.append('correo', document.getElementById("correo_u").value);
     data.append('direccion', document.getElementById("direccion_u").value);
+    data.append('contrasena', document.getElementById("contrasena_u").value);
 
     fetch(url, {
-            method: 'PUT', // or 'PUT'
+            method: 'POST', // or 'PUT'
             body: data, // data can be `string` or {object}!
 
         }).then(res => res.json())

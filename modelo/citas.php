@@ -3,18 +3,18 @@ class citas{
     function Agregarcitas($param){
         extract($param);
         $sql = "INSERT INTO citas(
-            codigo_cita, fecha_cita, cedula_trabajador, codigo_servicio, placa_carro, descripcion_cita,hora, estado)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
+            codigo_cita, fecha_cita, servicio_cita, nit_sede, cedula_usuario, placa_carro)
+            VALUES (?, ?, ?, ?, ?, ?);";
         $rs = $conexion->getPDO()->prepare($sql);
         $conexion->getPDO()->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 try {
-                    $rs->execute(array($codigo,$fecha, $cedula_t, $codigo_s, $placa, $descripcion,$hora, $estado));
+                    $rs->execute(array($codigo,$fecha, $servicio,$nit, $cedula, $placa));
                       $state  = "Cita programada correctamente con la codigo " .$codigo ;
                      
                     echo json_encode($state);
                  } catch (Exception $ex) {
                     //$state[0] = print_r($ex, 1);
-                    $state = "Ocurrio un error al programar la cita con codigo: " .$codigo ;
+                    $state = "Ocurrio un error al programar la cita con codigo: " .$ex ;
                     
                     echo json_encode($state);
                 }

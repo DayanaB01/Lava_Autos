@@ -10,20 +10,24 @@
     <div class="header">
         <h1>LAVA AUTOS BOOM</h1>
         <div class="menu">
-            <a href="../../index.html"> INICIO </a>  <a href="productos.html">| PRODUCTOS </a>
-            <a href="usuarios.html">|  USUARIOS </a>       <a href="carros.html">| CARROS </a>
-            <a href="servicios.html">| SERVICIOS </a>        <a href="citas.html">| CITAS </a>
+            <a href="../../index.html"> INICIO </a>  
+            <a href="producservi.html">| PRODUCTOS </a>
+            <a href="usuarios.html">|  USUARIOS </a>      
+             <!-- <a href="carros.html">| CARROS </a> -->
+            <a href="servicios.html">| SERVICIOS </a>        
+            <!-- <a href="citas.html">| CITAS </a> -->
             <!-- <a href="trabajadores.html">| TRABAJADORES </a>  <a href="producservi.html">| PRO-SER</a> -->
         </div>
     </div>
 
     <div class="introduccion">
         <div class="imagen">
-            <img src="../includes/imagenes/auto.jpg" alt="automovil" />
+            <img src="../includes/imagenes/auto.png" alt="automovil" />
         </div>
         <div class="intro">
           <p>
-            No solo queremos conocer el auto, también queremos conocerte a ti, por eso te recomendamos llenar los siguientes datos.
+            No solo queremos conocer el auto, también queremos conocerte a ti, por eso te recomendamos llenar los siguientes datos,
+            para que puedas solicitar citas, o para que adquieras los productos que tenemos para ti.
           </p>
         </div>
     </div>
@@ -32,31 +36,59 @@
         <div class="parra">
             <p>
               Para un mejor servicio y atención, llena el formulario a continuación. 
-              *Si ya estas registrado, no es necesario volver a llenar el formulario.
+              *Si ya estas registrado, no es necesario volver a llenar el formulario. En
+              la parte inferior de esta pagina esta la sección registro ↓↡↓.
             </p>
           </div>
         </div>
 
         <div class="row">
-            <div class="col-md-4 offset-md-1">
-                <h1>Formulario de registro</h1>
+          <div class="col-md-8 offset-md-2">
+            <h2>INICIAR SESION</h2>
+          </div>
+            <div class="col-md-6 offset-md-3">
                 <div class="f">
-                    <label for="cedula_u" class="letra">CEDULA:</label>
+                    <label for="nombre_u">NOMBRE:</label>
+                    <input type="text" id="nombre">
+                    <label for="direccion_u">CONTRASEÑA:</label>
+                    <input type="text" size="16" id="contrasena" maxlength="8">
+                    <button id="iniciar">INICIAR</button>
+                </div>                
+            </div>
+            <!-- <div class="col-md-6">
+              <img src="../includes/imagenes/Usuarios.png" alt="Persona">
+                 <table border="black" bgcolor="#eaecee" id="conusuario">
+                    <h1>Consultar registro</h1>
+                </table>
+                <button id="consultar">CONSULTAR</button> 
+            </div>-->
+        </div>
+
+
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            <h2>REGISTRARSE</h2>
+          </div>
+            <div class="col-md-4 offset-md-3">
+                <div class="f">
+                    <label for="cedula_u">CEDULA:</label>
                     <input type="number" id="cedula_u" maxlength="10">
-                    <label for="nombre_u" class="letra">NOMBRE:</label>
+                    <label for="nombre_u">NOMBRE:</label>
                     <input type="text" size="18" id="nombre_u" maxlength="30">
-                    <label for="apellido_u" class="letra">APELLIDO:</label>
+                    <label for="apellido_u">APELLIDO:</label>
                     <input type="text" size="17" id="apellido_u" maxlength="30">
-                    <label for="tel_u" class="letra">TELEFONO:</label>
+                    <label for="tel_u">TELEFONO:</label>
                     <input type="number" id="tel_u">
-                    <label for="correo_u" class="letra">CORREO:</label>
+                    <label for="correo_u">CORREO:</label>
                     <input type="email" size="18" id="correo_u" maxlength="35">
-                    <label for="direccion_u" class="letra">DIRECCION:</label>
+                    <label for="direccion_u">DIRECCION:</label>
                     <input type="text" size="16" id="direccion_u" maxlength="8">
+                    <label for="contrasena_u">CONTRASEÑA</label>
+                    <input type="password" name="contrasena" id="contrasena_u">
                     <button id="registrar">REGISTRAR</button>
                 </div>                
             </div>
-            <div class="col-md-6">
+            <div class="col-md-3">
               <img src="../includes/imagenes/Usuarios.png" alt="Persona">
                 <!-- <table border="black" bgcolor="#eaecee" id="conusuario">
                     <h1>Consultar registro</h1>

@@ -1,13 +1,57 @@
-var url='controlador/fachada.php';
+var url='../../controlador/fachada.php';
 
 
 document.getElementById("registrar").addEventListener('click', function() {
-    agregarservicio();
+    AgregarCarro();
 });
 
-document.getElementById("consultar").addEventListener('click', function() {
-    Consultarservicios();
+document.getElementById("agendar").addEventListener('click', function() {
+    Agregarcitas();
 });
+
+function AgregarCarro() {
+
+    const data = new FormData();
+    data.append('oper', 'AgregarCarro');
+    data.append('clase', 'carros');
+    data.append('placa', document.getElementById("placa_c").value);
+    data.append('marca', document.getElementById("marca_c").value);
+    data.append('modelo', document.getElementById("modelo_c").value);
+    data.append('tamano', document.getElementById("tamano_c").value);
+    data.append('cedula_u', document.getElementById("cedula_u").value);
+    console.log('documentos: ', data.get('tamano'))
+
+    fetch(url, {
+            method: 'POST',
+            body: data, 
+
+        }).then(res => res.json())
+        .catch(error => console.error('Error:', error))
+        .then(response => alert(response));
+
+}
+
+function Agregarcitas() {
+
+    const data = new FormData();
+    data.append('oper', 'Agregarcitas');
+    data.append('clase', 'citas');
+    data.append('codigo', document.getElementById("codigo_c").value);
+    data.append('fecha', document.getElementById("fecha_c").value);
+    data.append('servicio', document.getElementById("servicio_c").value);
+    data.append('nit', '123')
+    data.append('cedula', document.getElementById("cedula_u").value);
+    data.append('placa', document.getElementById("placa_c").value);
+    console.log('documentos: ', data.get('codigo'))
+    fetch(url, {
+            method: 'POST', // or 'PUT'
+            body: data, // data can be `string` or {object}!
+
+        }).then(res => res.json())
+        .catch(error => console.error('Error:', error))
+        .then(response => alert(response));
+
+}
 
 function agregarservicio() {
 

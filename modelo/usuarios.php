@@ -2,13 +2,13 @@
 class usuarios{
     function Agregarusuario($param){
         extract($param);
-        $sql = "INSERT INTO usuario(
-            cedula_usuario, nombre_usuario, apellido_usuario,telefono_usuario, correo_usuario, direccion_usuario)
-            VALUES (?, ?, ?, ?, ?, ?);";
+        $sql = "INSERT INTO usuarios(
+            cedula_usuario, nombre_usuario, apellido_usuario,telefono_usuario, correo_usuario, direccion_usuario, contrasena)
+            VALUES (?, ?, ?, ?, ?, ?, ?);";
         $rs = $conexion->getPDO()->prepare($sql);
         $conexion->getPDO()->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 try {
-                    $rs->execute(array($cedula,$nombre, $apellido, $telefono, $correo, $direccion ));
+                    $rs->execute(array($cedula,$nombre, $apellido, $telefono, $correo, $direccion, $contrasena ));
                       $state  = "Usuario insertado correctamente con la cedula " .$cedula ;
                      
                     echo json_encode($state);

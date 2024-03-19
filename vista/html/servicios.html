@@ -1,80 +1,148 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset='utf-8'>
+  <head>
+    <meta charset="utf-8" />
     <title>SERVICIOS</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="header">
-        <h1>LAVA AUTOS BOOM</h1>
-        <div class="menu">
-            <a href="../../index.html"> INICIO </a>  <a href="productos.html">| PRODUCTOS </a>
-            <a href="usuarios.html">|  USUARIOS </a>       <a href="carros.html">| CARROS </a>
-            <a href="servicios.html">| SERVICIOS </a>        <a href="citas.html">| CITAS </a>
-            <!-- <a href="trabajadores.html">| TRABAJADORES </a>  <a href="producservi.html">| PRO-SER</a> -->
-        </div>
+      <h1>LAVA AUTOS BOOM</h1>
+      <div class="menu">
+        <a href="../../index.html"> INICIO </a>
+        <a href="producservi.html">| PRODUCTOS </a>
+        <a href="usuarios.html">| USUARIOS </a>
+        <!-- <a href="carros.html">| CARROS </a> -->
+        <a href="servicios.html">| SERVICIOS </a>
+        <!-- <a href="citas.html">| CITAS </a> -->
+        <!-- <a href="trabajadores.html">| TRABAJADORES </a>  <a href="producservi.html">| PRO-SER</a> -->
+      </div>
     </div>
-
+    <!--EN ESTA PÁGINA SE CONCENTRA  EL REGISTRO DE CARROS Y LA SOLLICITUD, CANCELACIÓN DE  CITAS -->
     <div class="introduccion">
-        <div class="imagen">
-            <img src="../includes/imagenes/auto.jpg" alt="automovil" />
-        </div>
-        <div class="intro">
-          <p>
-            Para darle el mejor lavado a tu auto, debemos conocerlo, por eso te recomendamos llenar los siguientes datos.
-          </p>
-        </div>
+      <div class="imagen">
+        <img src="../includes/imagenes/auto.png" alt="automovil" />
+      </div>
+      <div class="intro">
+        <p>
+          Para que tu vehiculo quede como nuevo, tenemos el mejor servicio y los
+          mejores productos.
+        </p>
+      </div>
     </div>
 
-        <div class="row">
-         <div class="parra">
-            <p>Para que tu vehiculo quede como nuevo, tenemos los mejores
-                servicios de lavado, solo debes llenar el siguiente formulario.
-            </p>
-        </div>
-        </div>
+    <div class="row">
+      <div class="parra">
+        <p>
+          Para darle el mejor lavado a tu auto, debemos conocerlo, por eso te
+          recomendamos llenar los siguientes datos con los datos del automovil,
+          recuarda que primero debes llenar el formulario de registro si no lo
+          has hecho, de lo contrario solo inicia sesion en la pestaña usuarios.
+        </p>
+      </div>
+    </div>
 
-        <div class="row">
-            <div class="col-md-4 offset-md-1">
-                <h1>Formulario de registro</h1>
-                <div class="f">
-                    <label for="codigo_s" class="letra">CODIGO:</label>
-                    <input type="number" size="20" id="codigo_s">
-                    <label for="completo_s" class="letra">COMPLETO:</label>
-                    <input type="text" size="18" id="completo_s">
-                    <label for="medio_s" class="letra">MEDIO:</label>
-                    <input type="text" size="21" id="medio_s">
-                    <label for="llantas_s" class="letra">LLANTAS:</label>
-                    <input type="text" id="llantas_s">
-                    <label for="interno_s" class="letra">INTERNO:</label>
-                    <input type="text" size="20" id="interno_s">
-                    <label for="brillo_s" class="letra">BRILLO:</label>
-                    <input type="text" size="22" id="brillo_s">
-                    <label for="nit" class="letra">NIT EMPRESA:</label>
-                    <input type="number" size="16" id="nit">
-                    <button id="registrar">REGISTRAR</button>
-                </div>               
-            </div>
-            <div class="col-md-6 offset-md-1">
-                <table border="black" bgcolor="#3e9af5" id="conservicio">
-                    <h1>Resultado de servicios</h1>
-                </table>
-                <button id="consultar">CONSULTAR</button>
-            </div>
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <h5>NUESTROS SERVICIOS</h5>
+      </div>
+      <div class="col-md-8 offset-md-2">
+        <p>
+          EN NUESTRA TIENDA ENCUENTRAS LOS MEJORES SERVICIOS, LOS AUTOS TIENEN
+          DIFERENTES TRATAMIENTOS DE ACUERDO A SUS MODELOS, MARCAS KILOMETRAJE,
+          POR ESTO CALIFICAMOS LOS SERVICIOS DE LA SIGUIENTE MANERA:
+        </p>
+        <ul>
+          <li>
+            LAVADO GENERAL: Consiste en el lavado de la parte interna del carro
+            y la parte exterior.
+          </li>
+          <li>LAVADO PARCIAL: Consiste en el lavado exterior del carro</li>
+          <li>LIMPIEZA INTERIOR: Consiste en el lavado interior del carro</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <p>
+          AQUI PUEDES REGISTRAR EL O LOS CARROS QUE DESEES, Y DESPÚES PUEDES
+          AGENDAR UNA CITA. *Si el auto ya esta registrado, no lo es necesario
+          volver a realizar el registro.
+        </p>
+      </div>
+      <div class="col-md-4 offset-md-4">
+        <h5>REGISTRO DE AUTOS</h5>
+        <div class="f">
+          <label for="placa">PLACA:</label>
+          <input type="text" size="20" id="placa_c" />
+          <label for="marca">MARCA:</label>
+          <input type="text" size="19 " id="marca_c" />
+          <label for="modelo">MODELO:</label>
+          <input type="number" size="17" id="modelo_c" />
+          <label for="tipo">TAMAÑO:</label>
+          <select name="TAMAÑO" id="tamano_c">
+            <option value="">GRANDE</option>
+            <option value="">MEDIANO</option>
+            <option value="">PEQUEÑO</option>
+          </select>
+          <label for="cedula_u">CEDULA USUARIO:</label>
+          <input type="number" size="15" id="cedula_u" />
+          <button id="registrar">REGISTRAR</button>
         </div>
-        <footer>
-            <ul>
-              <li>Proyecto educativo 2020</li>
-              <li>Actualizado 2024</li>
-            </ul>
-          </footer>
+      </div>
+    </div>
 
-        <script type="text/javascript" src="../includes/jquery/jquery-3.3.1.js"></script>
-        <link rel="stylesheet" href="../includes/bootsrap 4/css/bootstrap.min.css">
-        <link rel="stylesheet" href="../css/usuarios.css">
-        <script src="../js/servicios.js"></script>
-</body>
 
+    <div class="row">
+     <div class="col-md-8 offset-md-2">
+       <p>*AQUI PUEDES AGENDAR TU CITA</p>
+     </div>
+      <div class="col-md-4 offset-md-4">
+        <h5>AGENDA TU CITA</h5>
+        <div class="f">
+          <label for="codigo_cita">CITA N°:</label>
+          <input type="number" size="20" id="codigo_c" />
+          <label for="fecha">FECHA:</label>
+          <input type="date" size="18" id="fecha_c" />
+          <label for="servicio">SERVICIO:</label>
+          <select name="" id="servicio_c">
+            <option value=""></option>
+            <option value="">LAVADO GENERAL</option>
+            <option value="">LAVADO PARCIAL</option>
+            <option value="">LAVADO INTERIOR</option>
+          </select>
+          <label for="cedula_u">CEDULA USUARIO:</label>
+          <input type="text" id="cedula_u" />
+          <label for="placa_c">PLACA DEL CARRO:</label>
+          <input type="text" size="20" id="placa_c" />
+          <button id="agendar">AGENDAR</button>
+        </div>
+      </div>
+      <!-- <div class="col-md-6 offset-md-1">
+        <table border="black" bgcolor="#3e9af5" id="conservicio">
+          <h1>Resultado de servicios</h1>
+        </table>
+        <button id="consultar">CONSULTAR</button>
+      </div> -->
+    </div>
+
+    <footer>
+      <ul>
+        <li>Proyecto educativo 2020</li>
+        <li>Actualizado 2024</li>
+      </ul>
+    </footer>
+
+    <script
+      type="text/javascript"
+      src="../includes/jquery/jquery-3.3.1.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="../includes/bootsrap 4/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../css/usuarios.css" />
+    <script src="../js/servicios.js"></script>
+  </body>
 </html>

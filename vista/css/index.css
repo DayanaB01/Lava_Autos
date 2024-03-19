@@ -91,7 +91,7 @@ h1, h5, h2{
 input{
     border-radius: 10px;
     border-color: blue;
-    width: 70%;  
+    width: 100%;  
 }
 button{
     background-color: #145683;
