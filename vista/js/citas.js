@@ -7,7 +7,7 @@ document.getElementById("registrar").addEventListener('click', function() {
 
 
 
-document.getElementById("consultarcita").addEventListener('click', function() {
+document.getElementById("consultarCitas").addEventListener('click', function() {
     ConsultarCita();
 });
 
@@ -41,7 +41,7 @@ function Agregarcitas() {
 
 
 
-function   ConsultarCita(){
+function ConsultarCita(){
     let cod=document.getElementById("codigo_c");
     const data = new FormData();
     
@@ -62,12 +62,11 @@ function   ConsultarCita(){
             if(response==null){
                 alert("entra");
             }else{            
-                var html="<tr><th> CODIGO </th> <th> FECHA </th> <th> HORA </th> <th> TRABAJADOR </th> <th> SERVICIO </th> <th> CARRO </th> <th> DESCRIPCION</th><th> ESTADO</th></tr>";
+                var html="";
                 response.forEach(element => {
-                    html+="<tr><th>"+ element.codigo_cita +" </th>" +"<th>"+ element.fecha_cita+" </th>"+"<th>"+ element.hora+" </th>" +"<th>"+ element.cedula_trabajador +" </th>" 
-                    +"<th>"+ element.codigo_servicio +" </th>" +"<th>"+ element.placa_carro +" </th>" +"<th>"+ element.descripcion_cita +"<th>"+ element.estado +"</th></tr>"
+                    html+="<tr><th>"+ element.codigo_cita +" </th>" +"<th>"+ element.fecha_cita+" </th><th>"+element.servicio_cita+"</th>"+ +"<th>"+ element.placa_carro +" </th>" + element.estado +"</th></tr>"
             });
-            document.getElementById("concita").innerHTML=(html);
+            document.getElementById("resultadoCitas").innerHTML=(html);
          }
          });
 

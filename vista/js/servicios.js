@@ -19,7 +19,6 @@ function AgregarCarro() {
     data.append('modelo', document.getElementById("modelo_c").value);
     data.append('tamano', document.getElementById("tamano_c").value);
     data.append('cedula_u', document.getElementById("cedula_u").value);
-    console.log('documentos: ', data.get('tamano'))
 
     fetch(url, {
             method: 'POST',
