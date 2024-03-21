@@ -38,10 +38,12 @@ function Agregarcitas() {
     data.append('codigo', document.getElementById("codigo_c").value);
     data.append('fecha', document.getElementById("fecha_c").value);
     data.append('servicio', document.getElementById("servicio_c").value);
-    data.append('nit', '123')
-    data.append('cedula', document.getElementById("cedula_u").value);
-    data.append('placa', document.getElementById("placa_c").value);
-    console.log('documentos: ', data.get('codigo'))
+    data.append('nit', '123');
+    data.append('cedula', document.getElementById("cedula_usuario").value);
+    data.append('placa', document.getElementById("placa_cita").value);
+    data.append('estado', 'en_espera');
+    // console.log('documentos: ', data.get('codigo'),'2: ', data.get('fecha'),'3: ', data.get('servicio'),'4: ', data.get('nit'),
+    // '5: ', data.get('cedula'),'6: ', data.get('placa'), '7: ', data.get('estado'))
     fetch(url, {
             method: 'POST', // or 'PUT'
             body: data, // data can be `string` or {object}!

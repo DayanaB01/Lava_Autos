@@ -1,11 +1,13 @@
-var url='controlador/fachada.php';
+var url='../../controlador/fachada.php';
 
 
-document.getElementById("registrar").addEventListener('click', function() {
-    Agregarcitas();
+// document.getElementById("registrar").addEventListener('click', function() {
+//     Agregarcitas();
+// });
+
+document.getElementById("consultarCita").addEventListener('click', function(){
+    ConsultarCita();
 });
-
-
 
 document.getElementById("consultarCitas").addEventListener('click', function() {
     ConsultarCita();
@@ -44,7 +46,6 @@ function Agregarcitas() {
 function ConsultarCita(){
     let cod=document.getElementById("codigo_c");
     const data = new FormData();
-    
     if(cod.value==''){
         data.append('oper','Consultarcitas');
         data.append('clase','citas');
@@ -61,12 +62,17 @@ function ConsultarCita(){
         .then(response => {
             if(response==null){
                 alert("entra");
-            }else{            
+            }else{  
                 var html="";
                 response.forEach(element => {
-                    html+="<tr><th>"+ element.codigo_cita +" </th>" +"<th>"+ element.fecha_cita+" </th><th>"+element.servicio_cita+"</th>"+ +"<th>"+ element.placa_carro +" </th>" + element.estado +"</th></tr>"
+                    html+="<tr><th>"+ element.codigo_cita +" </th>" +"<th>"+ element.fecha_cita+" </th><th>"+
+                    element.servicio_cita+"</th><th>"+ element.placa_carro +" </th><th>" + element.estado +"</th></tr>"
             });
-            document.getElementById("resultadoCitas").innerHTML=(html);
+            if (cod.value =='') {
+                document.getElementById("resultadoCitas").innerHTML=(html);     
+            } else {
+                document.getElementById("info_Cita").innerHTML=(html); 
+            }   
          }
          });
 

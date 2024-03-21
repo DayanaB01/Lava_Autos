@@ -3,12 +3,12 @@ class citas{
     function Agregarcitas($param){
         extract($param);
         $sql = "INSERT INTO citas(
-            codigo_cita, fecha_cita, servicio_cita, nit_sede, cedula_usuario, placa_carro)
-            VALUES (?, ?, ?, ?, ?, ?);";
+            codigo_cita, fecha_cita, servicio_cita, nit_sede, cedula_usuario, placa_carro, estado)
+            VALUES (?, ?, ?, ?, ?, ?, ?);";
         $rs = $conexion->getPDO()->prepare($sql);
         $conexion->getPDO()->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 try {
-                    $rs->execute(array($codigo,$fecha, $servicio,$nit, $cedula, $placa));
+                    $rs->execute(array($codigo,$fecha,$servicio,$nit,$cedula,$placa,$estado));
                       $state  = "Cita programada correctamente con la codigo " .$codigo ;
                      
                     echo json_encode($state);

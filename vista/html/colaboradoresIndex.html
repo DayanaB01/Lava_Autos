@@ -8,64 +8,106 @@
   </head>
   <body>
     <div class="header">
-        <h1>LAVA AUTOS BOOM</h1>
-        <div class="indices">
-          <a href="#">| COLABORADORES </a>
+      <h1>LAVA AUTOS BOOM</h1>
+      <div class="indices">
+        <a href="#">| COLABORADORES </a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3 offset-md-5">
+        <div class="imagenC">
+          <img
+            src="../includes/imagenes/Colaborador.jpg"
+            alt="Colaborador boom"
+          />
         </div>
       </div>
+    </div>
 
-      <div class="row">
-        <div class="col-md-3 offset-md-5">
-          <div class="imagenC">
-            <img src="../includes/imagenes/Colaborador.jpg" alt="Colaborador boom">
-          </div>
-        </div>
+    <div class="row">
+      <div class="col-md-8 offset-md-3">
+        <p>SECCION ESPECIAL PARA LOS COLABORADORES DE LAVAAUTOS BOOM.</p>
       </div>
+    </div>
 
-      <div class="row">
-        <div class="col-md-8 offset-md-3">
-            <p>SECCION ESPECIAL PARA LOS COLABORADORES DE LAVAAUTOS BOOM
-               
-            </p>
-        </div>
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <p>Consulta todas las citas</p>
+        <table>
+          <thead>
+            <tr>
+              <th>CITA N°</th>
+              <th>FECHA</th>
+              <th>SERVICIO</th>
+              <th>PLACA</th>
+              <th>ESTADO</th>
+            </tr>
+          </thead>
+          <tbody id="resultadoCitas"></tbody>
+        </table>
+        <button id="consultarCitas">CONSULTAR CITAS</button>
       </div>
+    </div>
 
-
-      <div class="row">
-        <div class="col-md-4 offset-md-4">
-            <table>
-                <thead>
-                    <tr>
-                        <th>CITA N°</th>
-                        <th>FECHA</th>
-                        <th>SERVICIO</th>
-                        <th>PLACA</th>
-                        <th>ESTADO</th>
-                    </tr>
-                </thead>
-                <tbody id="resultadoCitas"></tbody>
-            </table>
-            <button id="consultarCitas">CONSULTAR CITAR</button>
-        </div>
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <label>CONSULTAR CITA CON CODIGO: </label>
+        <input type="number" name="" id="codigo_c" />
+        <button id="consultarCita">CONSULTAR CITA</button>
+        <table>
+          <thead>
+            <tr>
+              <th>CITA N°</th>
+              <th>FECHA</th>
+              <th>SERVICIO</th>
+              <th>PLACA</th>
+              <th>ESTADO</th>
+            </tr>
+          </thead>
+          <tbody id="info_Cita"></tbody>
+        </table>
       </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <p>
+          INGRESA EL CODIGO DE LA CITA A MODIFICAR, E INGRESA EL ESTADO DE LA
+          CITA
+        </p>
+      </div>
+      <div class="col-md-4 offset-md-4">
+        <label for="codigo">CODIGO: </label>
+        <input type="number" id="codigo_c" />
+        <label for="estado">ESTADO</label>
+        <select name="estados" id="estado">
+          <option disabled selected>SELECCIONA UNA OPCIÓN</option>
+          <option value="en_espera">EN ESPERA</option>
+          <option value="completado">COMPLETADO</option>
+          <option value="en_proceso">EN PROCESO</option>
+        </select>
+        <button id="editar">EDITAR</button>
+      </div>
+    </div>
 
     <footer>
-        <ul>
-          <li>ELABORADO POR: DAYANA</li>
-        </ul>
-        <ul>
-          <li><a href="../../index.html">PRINCIPAL:</a></li>
-          <li>Registros</li>
-        </ul>
-        <ul>
-          <li>COLABORADORES:</li>
-          <li>Consultas</li>
-        </ul>
-        <ul>
-          <li>Proyecto educativo 2020</li>
-          <li>Actualizado 2024</li>
-        </ul>
-      </footer>
+      <ul>
+        <li>ELABORADO POR: DAYANA</li>
+      </ul>
+      <ul>
+        <li><a href="../../index.html">PRINCIPAL:</a></li>
+        <li>Registros</li>
+      </ul>
+      <ul>
+        <li>COLABORADORES:</li>
+        <li>Consultas</li>
+      </ul>
+      <ul>
+        <li>Proyecto educativo 2020</li>
+        <li>Actualizado 2024</li>
+      </ul>
+    </footer>
     <script
       type="text/javascript"
       src="../includes/jquery/jquery-3.3.1.js"
