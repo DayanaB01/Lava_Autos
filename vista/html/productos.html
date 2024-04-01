@@ -40,7 +40,12 @@
                 <label for="nombre_p">NOMBRE:</label>
                 <input type="text" size="19 " id="nombre_p" />
                 <label for="tamaño_p">TAMAÑO:</label>
-                <input type="text" size="19" id="tamaño_p" />
+                <select id="tamaño_p">
+                  <option value="" disabled selected>SELECCIONA UNA OPCIÓN</option>
+                  <option value="Grande">Grande</option>
+                  <option value="Mediana">Mediano</option>
+                  <option value="Pequeno">Pequeño</option>
+                </select>
                 <label for="valor_p">VALOR:</label>
                 <input type="number" size="21" id="valor_p" />
                 <label for="calidad_p">SEDES:</label>
@@ -64,6 +69,8 @@
               <th>TAMAÑO</th>
               <th>VALOR</th>
               <th>URL IMAGEN</th>
+              <th>EDITAR</th>
+              <th>ELIMINAR</th>
             </tr>
           </thead>
           <tbody id="conproductos"></tbody>
@@ -71,6 +78,41 @@
         <button id="consultar">CONSULTAR</button>
       </div>
     </div>
+
+<div class="row">
+  <div class="col-md-6 offset-md-3">
+    <div class="formularios">
+      <h1>Buscar un solo producto</h1>
+      <label for="codigo">CODIGO DEL PRODUCTO</label>
+      <input type="number" id="codigo">
+      <button id="buscarProducto">BUSCAR PRODUCTO</button>
+    </div>
+  </div>
+  <div class="col-md-6 offset-md-3" >
+    <table>
+      <thead>
+        <tr>
+          <th>CODIGO</th>
+          <th>NOMBRE</th>
+          <th>TAMAÑO</th>
+          <th>VALOR</th>
+          <th>URL IMAGEN</th>
+          <th>EDITAR</th>
+          <th>ELIMINAR</th>
+        </tr>
+      </thead>
+      <tbody id="productoUnico"></tbody>
+    </table>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6 offset-md-3">
+    <p>AQUI PUEDES EDITAR EL PRODUCTO</p>
+    <div class="editar_producto" id="editarInfo"></div>
+  </div>
+</div>
+
 
     <footer>
       <ul>

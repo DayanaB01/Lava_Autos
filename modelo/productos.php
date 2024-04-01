@@ -39,4 +39,62 @@ class productos{
  
 
     }
+
+    function consultarUnico($parametro){
+        extract($parametro);
+        $sql = "SELECT * FROM productos WHERE codigo_producto=?";
+        $rs = $conexion->getPDO()->prepare($sql);
+        if ($rs->execute(array($codigo))) {
+            if ($element = $rs->fetchAll(PDO::FETCH_ASSOC)) {
+                foreach($element as $element){
+                    $array[] = $element;
+                }
+            }
+        }
+        echo json_encode(($array));
+    }
+
+    function editarProducto($parametros){
+        extract($parametros);
+        $sql="UPDATE productos SET nombre_producto='$nombre', tamano_producto='$tamano', valor_producto= '$valor', imagen='$url' WHERE codigo_producto = ?";
+        $rs = $conexion->getPDO()->prepare($sql);
+        if ($rs->execute(array($codigo))) {
+            if ($element = $rs->fetchAll(PDO::FETCH_ASSOC)) {
+                foreach($element as $element){
+                    $array[] = $element;
+                }
+            }
+        }
+        echo json_encode(($array));
+    }
+
+    function eliminarProducto($parametro){
+        extract($parametro);
+        $sql = "DELETE FROM productos WHERE codigo_producto=?";
+        $rs = $conexion->getPDO()->prepare($sql);
+        // $conexion->getPDO()->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        // try {
+        //     $rs->execute(array($codigo));
+        //     $estado = "Producto eliminado con exito";
+        //     echo json_encode($estado)
+        // } catch (Exception $ex) {
+        //     $estado = "Hubo un problema para eliminar";
+        //     echo json_encode($estado)
+        // }
+        if ($rs->execute(array($codigo))) {
+        try {
+            $estado = "Producto eliminado con exito";
+           // echo json_encode($estado)
+        } catch (Exception $ex) {
+            $estado = "Hubo un problema para eliminar".$ex;
+            //echo json_encode($estado)
+        }
+            // if ($elemento = $rs->fetchAll(PDO::FECTH_ASSOC)) {
+            //     foreach ($elemento as $elemento) {
+            //         $array[] = $elemento;
+            //     }
+            // }
+        } 
+        echo json_encode(($estado));
+    }
 }

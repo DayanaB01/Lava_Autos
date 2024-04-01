@@ -130,6 +130,7 @@ table{
 th{
     color: #A0DFF8;
     width: 10rem;
+    border: 2px solid #A0DFF8; 
 }
 .col-md-6{
     margin-top: 5%;
