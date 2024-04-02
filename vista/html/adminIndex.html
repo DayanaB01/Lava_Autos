@@ -61,17 +61,55 @@
           <table>
             <thead>
               <tr>
+                <th>SEDE</th>
                 <th>NOMBRE</th>
                 <th>DIRECCIÓN</th>
                 <th>TELEFONO</th>
                 <th>CORREO</th>
                 <th>RESPONSABLE</th>
+                <th>EDITAR</th>
+                <th>ELIMINAR</th>
               </tr>
             </thead>
             <tbody id="conlava"></tbody>
           </table>
           <button id="consultar">CONSULTAR</button>
         </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="formularios">
+          <h1>Buscar sede</h1>
+          <label for="codigo">CODIGO DE SEDE</label>
+          <input type="number" id="codigo_sede">
+          <button id="unicaSede">BUSCAR SEDE</button>
+        </div>
+      </div>
+      <div class="col-md-6 offset-md-3" >
+        <table>
+          <thead>
+            <tr>
+              <th>SEDE</th>
+              <th>NOMBRE</th>
+              <th>DIRECCIÓN</th>
+              <th>TELEFONO</th>
+              <th>CORREO</th>
+              <th>RESPONSABLE</th>
+              <th>EDITAR</th>
+              <th>ELIMINAR</th>
+            </tr>
+          </thead>
+          <tbody id="infoSede"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <p>AQUI PUEDES EDITAR LA INFORMACIÓN DE LA SEDE</p>
+        <div class="editar_producto" id="infoEditar"></div>
       </div>
     </div>
 
