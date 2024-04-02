@@ -68,11 +68,49 @@
               <th>CORREO</th>
               <th>EDAD</th>
               <th>SEDE</th>
+              <th>EDITAR</th>
+              <th>ELIMINAR</th>
             </tr>
           </thead>
           <tbody id="contrabajadores"></tbody>
         </table>
         <button id="consultar">CONSULTAR</button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="formularios">
+          <h1>Buscar un colaborador</h1>
+          <label for="codigo">CODIGO DEL COLABORADOR</label>
+          <input type="number" id="codigo_colaborador">
+          <button id="buscarColaborador">BUSCAR CODIGO DE COLABORADOR</button>
+        </div>
+      </div>
+      <div class="col-md-6 offset-md-3" >
+        <table>
+          <thead>
+            <tr>
+              <th>CEDULA</th>
+              <th>NOMBRE</th>
+              <th>APELLIDO</th>
+              <th>TELEFONO</th>
+              <th>CORREO</th>
+              <th>EDAD</th>
+              <th>SEDE</th>
+              <th>EDITAR</th>
+              <th>ELIMINAR</th>
+            </tr>
+          </thead>
+          <tbody id="colaborador"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <p>AQUI PUEDES EDITAR LA INFORMACIÓN DEL COLABORADOR</p>
+        <div class="editar_producto" id="editarInfo"></div>
       </div>
     </div>
 

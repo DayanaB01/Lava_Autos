@@ -16,9 +16,7 @@ document.getElementById("buscarProducto").addEventListener('click', function(){
         limpiarInputs();
     }
 });
-// document.getElementById('editarProducto').addEventListener('click', function(){
-//     EditarProducto();
-// })
+
 
 function limpiarInputs(){
     let vacio = '';
@@ -133,7 +131,7 @@ function eliminarProducto(parametro) {
     data.append('oper', 'eliminarProducto');
     data.append('clase', 'productos');
     data.append('codigo', parametro);
-    console.log("PRODUCTO:", parametro)
+    //console.log("PRODUCTO:", parametro)
     fetch(url,{
         method: 'POST',
         body: data,

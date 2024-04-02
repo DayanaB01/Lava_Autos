@@ -21,8 +21,8 @@ class trabajadores{
 
     }
 
-    function consultartraba($param){
-        extract($param);
+    function consultartraba($p){
+        extract($p);
         $sql = "select * from colaboradores";
         $rs = $conexion->getPDO()->prepare($sql);
         if ($rs->execute(array())) {
@@ -34,8 +34,48 @@ class trabajadores{
             }
         }
     
-            echo json_encode(($array));        
- 
+            echo json_encode(($array));
+    }
 
+    function consultarColaborador($parametro){
+        extract($parametro);
+        $sql = "SELECT * FROM colaboradores WHERE cedula_colab = ?";
+        $rs = $conexion->getPDO()->prepare($sql);
+        if ($rs->execute(array($codigo))) {
+            if ($elemento=$rs->fetchAll(PDO::FETCH_ASSOC)) {
+                foreach ($elemento as $elemento) {
+                    $array[] = $elemento;
+                }
+            }
+        }
+        echo json_encode(($array));
+    }
+
+    function editarColaborador($param){
+        extract($param);
+        $sql="UPDATE colaboradores SET nombre_colab='$nombre', apellido_colab='$apellido',telefono_colab='$telefono', correo_colab='$correo', edad_colab='$edad', nit_sede='$sede' WHERE cedula_colab=?";
+        $rs = $conexion->getPDO()->prepare($sql);
+        if ($rs->execute(array($codigo))) {
+            if ($elemento = $rs->fetchAll(PDO::FETCH_ASSOC)) {
+                foreach ($elemento as $elemento) {
+                    $arrayColab[]=$elemento;
+                }
+            }
+        }
+        echo json_encode(($arrayColab));
+    }
+
+    function eliminarInfoColab($info){
+        extract($info);
+        $sql = "DELETE FROM colaboradores WHERE cedula_colab = ?";
+        $rs=$conexion->getPDO()->prepare($sql);
+        if ($rs->execute(array($codigo))) {
+            try {
+                $state="Información del colaborador eliminado";
+            } catch (Exception $ex) {
+                $state="Ocurre un error al eliminar";
+            }
+        }
+        echo json_encode(($state));
     }
 }
