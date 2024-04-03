@@ -170,3 +170,11 @@ li{
     font-size: large;
     list-style: none;
 }
+table{
+    border: 2px solid #A0DFF8;
+}
+th{
+    color: #A0DFF8;
+    width: 10rem;
+    border: 2px solid #A0DFF8; 
+}

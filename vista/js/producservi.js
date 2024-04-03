@@ -9,12 +9,14 @@ var url='../../controlador/fachada.php';
 //     Consultarps();
 // });
 
-window.addEventListener('click', function(){
-    ConsultarProductos()
-})
+// window.addEventListener('click', function(){
+//     ConsultarProductos()
+// })
+
 // document.getElementById("consultarProductos").addEventListener('click', function(){
 //     ConsultarProductos();
 // });
+
 
 function AgregarProducservi() {
 
@@ -75,14 +77,23 @@ function ConsultarProductos(){
             var html="";
             response.forEach(element => {
                 html+="<div class='card'><img src="+element.imagen+"><ul><li>"+element.nombre_producto+"</li><li>"+
-                element.tamano_producto+"</li><li>"+element.valor_producto+"</li></ul><button onclick='comprar("+element.codigo_producto+")'>Carrito</button></div>";
+                element.tamano_producto+"</li><li>"+element.valor_producto+"</li></ul><button onclick='comprar("+element.codigo_producto, element.nombre_producto+")'>Carrito</button></div>";
             });
             document.getElementById("lista").innerHTML=(html);
         });
+
+
+
+}
+var selec=[];
+function comprar(c,p){
+    alert('producto seleccionado'+c+"P"+p);
+    selec.push(c);
+    console.log("array: ", selec)
+    
 }
 
-function comprar(c){
-    alert('producto seleccionado')
-    console.log("aquiiiii: ",c)
+function mostrar(params) {
+    console.log("aquiiiii: ",selec)
 }
 

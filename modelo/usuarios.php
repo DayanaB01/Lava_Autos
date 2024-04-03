@@ -38,4 +38,60 @@ class usuarios{
  
 
     }
+
+    function buscarUsuario($parametro){
+        extract($parametro);
+        $sql="SELECT * FROM usuarios WHERE contrasena='$contrasena' AND cedula_usuario=?";
+        $rs=$conexion->getPDO()->prepare($sql);
+        if($rs->execute(array($codigo))){
+            if ($e = $rs->fetchAll(PDO::FETCH_ASSOC)) {
+                foreach ($e as $e) {
+                    $arrayUsuario[]=$e;
+                }
+            }
+        }
+        echo json_encode(($arrayUsuario));
+    }
+
+    function buscarUsuarioE($parametro){
+        extract($parametro);
+        $sql="SELECT * FROM usuarios WHERE cedula_usuario=?";
+        $rs=$conexion->getPDO()->prepare($sql);
+        if($rs->execute(array($codigo))){
+            if ($e = $rs->fetchAll(PDO::FETCH_ASSOC)) {
+                foreach ($e as $e) {
+                    $arrayUsuario[]=$e;
+                }
+            }
+        }
+        echo json_encode(($arrayUsuario));
+    }
+
+    function editarUsuario($p){
+        extract($p);
+        $sql="UPDATE usuarios SET nombre_usuario='$nombre', apellido_usuario='$apellido', telefono_usuario='$telefono', correo_usuario='$correo', direccion_usuario='$direccion' WHERE cedula_usuario=?";
+        $rs=$conexion->getPDO()->prepare($sql);
+        if ($rs->execute(array($codigo))) {
+            if ($ele = $rs->fetchAll(PDO::FETCH_ASSOC)) {
+                foreach ($ele as $ele) {
+                    $arrayEditar[]=$ele;
+                }
+            }
+        }
+        echo json_encode(($arrayEditar));
+    }
+
+    function eliminarUsuario($info){
+        extract($info);
+        $sql="DELETE FROM usuarios WHERE cedula_usuario=?";
+        $rs = $conexion->getPDO()->prepare($sql);
+        if ($rs->execute(array($codigo))) {
+        try {
+            $estado = "Cuenta eliminada con exito";
+        } catch (Exception $ex) {
+            $estado = "Hubo un problema para eliminar".$ex;
+        }
+        } 
+        echo json_encode(($estado));
+    }
 }
