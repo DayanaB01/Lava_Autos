@@ -42,7 +42,7 @@ class citas{
 
     function Consultarcita($param){
         extract($param);
-        $sql ="select * from citas where codigo_cita=?";
+        $sql ="select * from citas where cedula_usuario=?";
         $rs = $conexion->getPDO()->prepare($sql);
         if ($rs->execute(array($codigo))) {
             if ($element = $rs->fetchAll(PDO::FETCH_ASSOC)) {

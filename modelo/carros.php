@@ -40,4 +40,46 @@ class carros{
 
     }
 
+    function consultaCarro($info){
+        extract($info);
+        $sql="SELECT * FROM carros WHERE cedula_usuario = ?";
+        $rs = $conexion->getPDO()->prepare($sql);
+        if ($rs->execute(array($codigo))) {
+            if ($element = $rs->fetchAll(PDO::FETCH_ASSOC)) {
+                foreach($element as $element){
+                    $arrayCarro[] = $element;
+                }
+            }
+        }
+        echo json_encode(($arrayCarro));
+    }
+
+    function BuscarCarro($p){
+        extract($p);
+        $sql="SELECT * FROM carros WHERE placa_carro = ? ";
+        $rs = $conexion->getPDO()->prepare($sql);
+        if ($rs->execute(array($codigo))) {
+            if ($element = $rs->fetchAll(PDO::FETCH_ASSOC)) {
+                foreach($element as $element){
+                    $arrayCarro[] = $element;
+                }
+            }
+        }
+        echo json_encode(($arrayCarro));
+    }
+
+    function editarCarro($change){
+        extract($change);
+        $sql="UPDATE carros SET marca_carro='$marca', modelo_carro='$modelo',tamano_carro='$tamano' WHERE placa_carro=?";
+        $rs = $conexion->getPDO()->prepare($sql);
+        if ($rs->execute(array($codigo))) {
+            if ($element = $rs->fetchAll(PDO::FETCH_ASSOC)) {
+                foreach($element as $element){
+                    $arrayEditar[] = $element;
+                }
+            }
+        }
+        echo json_encode(($arrayEditar));
+    }
+
 }
