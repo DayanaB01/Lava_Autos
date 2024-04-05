@@ -161,7 +161,7 @@ function Buscarcitas() {
     .catch((e) => console.error(e))
     .then((res) => {
       var table =
-        "<tr><th>FECHA</th><th>SERVICIO</th><th>PLACA CARRO</th></tr>";
+        "<tr><th>FECHA</th><th>SERVICIO</th><th>PLACA CARRO</th><th>ESTADO</th><th>CANCELAR</th></tr>";
       res.forEach((x) => {
         table +=
           "<tr><th>" +
@@ -170,10 +170,28 @@ function Buscarcitas() {
           x.servicio_cita +
           "</th><th>" +
           x.placa_carro +
-          "</th></tr>";
+          "</th><th>"+x.estado
+          +"</th><th><button onClick='cancelarCita("+
+          x.codigo_cita+")'>❌</button></th></tr>";
+
       });
       document.getElementById('listasCitas').innerHTML=table;
     });
+}
+
+function cancelarCita(codigo){
+  let datos = new FormData();
+  datos.append('oper', 'cancelarCitas');
+  datos.append('clase', 'citas');
+  datos.append('codigo', codigo);
+
+  fetch(url,{
+    method:'POST',
+    body:datos,
+  })
+  .then(res=>res.json())
+  .catch(e=>console.error(e))
+  .then(alert('Cita cancelada'))
 }
 
 function agregarservicio() {

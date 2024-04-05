@@ -74,7 +74,19 @@ class citas{
     }
     
 
-
+function cancelarCitas($p){
+    extract($p);
+    $sql = "DELETE FROM citas WHERE codigo_cita=?";
+    $rs = $conexion->getPDO()->prepare($sql);
+    if ($rs->execute(array($codigo))) {
+    try {
+        $estado = "Producto eliminado con exito";
+    } catch (Exception $ex) {
+        $estado = "Hubo un problema para eliminar".$ex;
+    }
+    } 
+    echo json_encode(($estado));
+}
 
 
 }
